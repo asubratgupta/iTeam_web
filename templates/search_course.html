@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <style type="text/css">
+    	.centerbody {        
+    		margin: 0;        
+    		position: absolute;        
+    		top: 50%;        
+    		left: 50%;        
+    		-ms-transform: translate(-50%, -50%);        
+    		transform: translate(-50%, -50%);      
+    	}
+
+    /*	.centerbody{
+    		align-self: center;
+    		align-content: center;
+    		shape-margin: 20%;
+    	}*/
+    	body {
+  			background-color: lightblue;
+		}
+    h3{
+      font-weight: normal;
+    }
+	
+    </style>
+    <title>iTeam home page</title>
+  </head>
+  <body bgcolor="#00b0ff">
+  	<center>
+
+        <div id='root' class='centerbody'>
+    		<form>
+
+         
+          <div class="form-group">
+            <label for="exampleInputEmail1">Enter TAGS</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <small id="emailHelp" class="form-text text-muted">Enter space seperated keywords list to filter out courses you want to find.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputEmail1">Select Preferred Languages</label>
+          </div>
+
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">English</label>
+          </div>
+
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Hindi</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Find Course</button>
+          
+          <button id ="gohome" type="button" class="btn btn-light"> Go Back to MAIN MENU..</button>
+        </form>
+
+        <div type='searchResults' class='SQL_Table'>
+          <h3>Hi! Search Results Table will come here</h3>
+        </div>
+
+    	</div>
+    
+    </center>
+  </body>
+</html>
