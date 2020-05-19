@@ -4,13 +4,13 @@
   	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <meta charset="utf-8">
     <style type="text/css">
-    	.centerbody {        
-    		margin: 0;        
-    		position: absolute;        
-    		top: 50%;        
-    		left: 50%;        
-    		-ms-transform: translate(-50%, -50%);        
-    		transform: translate(-50%, -50%);      
+    	.centerbody {
+    		margin: 0;
+    		position: absolute;
+    		top: 50%;
+    		left: 50%;
+    		-ms-transform: translate(-50%, -50%);
+    		transform: translate(-50%, -50%);
     	}
 
     /*	.centerbody{
@@ -24,7 +24,7 @@
     h3{
       font-weight: normal;
     }
-	
+
     </style>
     <title>iTeam home page</title>
   </head>
@@ -32,12 +32,11 @@
   	<center>
 
         <div id='root' class='centerbody'>
-    		<form>
+          <form action="{{ url_for('find_learners') }}" method="post">
 
-         
           <div class="form-group">
             <label for="exampleInputEmail1">Enter Course URL</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="email" name="course_url" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             <small id="emailHelp" class="form-text text-muted">Paste Course URL whose learners you want to find.</small>
           </div>
 
@@ -46,18 +45,20 @@
           </div>
 
           <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <input type="checkbox" name="english" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">English</label>
           </div>
 
           <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <input type="checkbox" name="hindi" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Hindi</label>
           </div>
 
           <button type="submit" class="btn btn-primary">Find Learners</button>
-          
-          <button id ="gohome" type="button" class="btn btn-light"> Go Back to MAIN MENU..</button>
+
+          <form action="{{ url_for('index') }}" method="post">
+            <button id ="gohome" class="btn btn-light"> Go Back to MAIN MENU..</button>
+          </form>
         </form>
 
         <div type='searchResults' class='SQL_Table'>
@@ -65,7 +66,7 @@
         </div>
 
     	</div>
-    
+
     </center>
   </body>
 </html>
